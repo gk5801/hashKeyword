@@ -1,0 +1,28 @@
+package primitiveDT;
+class student
+{
+	String name;
+	int rno;
+    student(String name,int rno)
+    {
+        this.name=name;
+        this.rno=rno;
+    }
+    void print()
+    {
+    	System.out.println(this.hashCode());//to print hashcode, predefined function is used.
+    }
+}
+
+public class hashCode {
+
+	public static void main(String[] args) {
+		student s1 = new student("gk",128);
+		student s2 = new student("ik",125);
+        s1.print();
+        s2.print();
+        student s3=s1;
+        s3.print(); // same hashcode as s1, cuz it is a variable not a different object.
+	}
+
+}
